@@ -5,15 +5,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class PageController {
-	
 	@RequestMapping("/")
 	String home() {
-		return "home";
-	}
-	@RequestMapping("/about")
-	String about() {
-		return "about";
+		return "app.homepage";
 	}
 	
-
+	@RequestMapping("/about")
+	String about() {
+		return "app.about";
+	}
+	
+	@RequestMapping("/addstatus")
+	String addStatus() {
+		return "app.addStatus";
+	}
 }
