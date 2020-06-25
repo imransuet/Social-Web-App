@@ -16,16 +16,16 @@ import javax.persistence.TemporalType;
 @Table(name = "status_update")
 public class StatusUpdate {
 
-	@Id
+	@Id //this annotation for primary key
 	@Column(name = "id")
-	@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO) //how to generate primary keys
 	private Long id;
 
-	@Column(name = "text")
+	@Column(name = "text") // annotation of naming attribute is optional
 	private String text;
 
 	@Column(name = "added")
-	@Temporal(TemporalType.TIMESTAMP)
+	@Temporal(TemporalType.TIMESTAMP) // to save the moment when data is created
 	private Date added;
 
 	@PrePersist
@@ -48,6 +48,7 @@ public class StatusUpdate {
 		this.added = added;
 	}
 
+	//We need getter and Setter, because hibernate gonna need this
 	public Long getId() {
 		return id;
 	}
