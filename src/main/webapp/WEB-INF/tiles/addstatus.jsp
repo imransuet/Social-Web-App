@@ -20,7 +20,7 @@
 
 				<form:form modelAttribute="statusUpdate">
 
-					<div>
+					<div class="errors">
 						<form:errors path="text" />
 					</div>
 					<div class="form-group">
